@@ -1,0 +1,15 @@
+@charset "UTF-8";
+.examlink{
+	color:blue;
+	text-decoration:uderline;
+}
+.examtable{
+	width:100%;
+	border: 0p;
+}
+.exambody{
+	padding:15px;
+}
+.error {
+	color: #FF0000
+		}

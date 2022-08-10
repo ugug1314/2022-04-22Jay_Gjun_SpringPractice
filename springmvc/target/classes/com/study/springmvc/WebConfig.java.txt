@@ -1,0 +1,23 @@
+package com.study.springmvc;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+
+
+@Configuration
+@ComponentScan("com.study")
+@EnableWebMvc
+//這裡是做全網設定，可在此轉向用xml設定
+public class WebConfig extends WebMvcConfigurerAdapter{
+
+//在java類別註冊使用 view 渲染器
+@Bean
+    public ViewResolver viewResolver() {
+        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+        viewResolver.setPrefix("/WEB-INF/views/");
+        viewResolver.setSuffix(".jsp");
+        return viewResolver;
+    }
+}

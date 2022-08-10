@@ -1,0 +1,62 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" isErrorPage="true"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="spform"
+	uri="http://www.springframework.org/tags/form"%>
+
+	<spform:form class="pure-form" method="post" modelAttribute="exam"
+		action="${ pageContext.request.contextPath }/mvc/case03/exam/">
+		<fieldset>
+			<legend>Exam Form</legend>
+			<!-- 此hidden的用途是讓spform能支援put及delete方法 -->
+			<input type="hidden" id="_method" name="_method" value="${ _method }">
+			學號：
+			<spform:input path="studentId" />
+			<spform:errors path="studentId" cssClass="error" /><p />
+			<p />
+			科目：
+			<spform:select path="examId">
+				<spform:option value="">請選擇</spform:option>
+				<spform:options items="${examSubjects }" itemValue="id" itemLabel="name"/>
+			</spform:select>
+			<spform:errors path="examId" cssClass="error" /><p />
+			<p />
+			<!-- path會自動產生html對應的id及name的值 -->
+			日期：
+			<spform:input path="examDate" type="date" />
+			<spform:errors path="examDate" cssClass="error" /><p />
+			<p />
+			時段：
+			<!--  homework時段改成 spform:checkboxes 
+			<spform:checkbox path="examSlot" value="A" />
+			上午(A)
+			<spform:checkbox path="examSlot" value="B" />
+			下午(B)
+			<spform:checkbox path="examSlot" value="C" />
+			晚上(C)-->
+			
+			<spform:checkboxes items="${ examTimes }" path="examSlot" itemValue="T_id" itemLabel="T_name"/>
+			<spform:errors path="examSlot" cssClass="error" /><p />
+			<p />
+			
+			繳費：
+			<!-- homework繳費改成 spform:radiobuttons 
+			<spform:radiobutton path="examPay" value="true" />
+			已繳
+			<spform:radiobutton path="examPay" value="false" />
+			未繳-->
+			<spform:radiobuttons items="${ examPays }" path="examPay" itemValue="Pay_id" itemLabel="Pay_name"/>
+			<spform:errors path="examPay" cssClass="error" /><p />
+			<p />
+			備註：
+			<spform:textarea path="examNote" />
+			<spform:errors path="examNote" cssClass="error" /><p />
+			<p />
+			<button type="submit" class="pure-button pure-button-primary" ${_method== 'POST'?'':'disabled' }>新增</button>
+			<button type="button" class="pure-button pure-button-primary" ${_method== 'PUT'?'':'disabled' } onclick="updateExam(${index})">修改</button>
+			<button type="button" class="pure-button pure-button-primary" ${_method== 'PUT'?'':'disabled' } onclick="deleteExam(${index})">刪除</button>
+		    <button type="reset" class="pure-button pure-button-primary" ${_method== 'POST'?'':'disabled' } >重置</button>
+		</fieldset>
+	</spform:form>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet"
+	href="https://unpkg.com/purecss@2.0.6/build/pure-min.css">
+<link rel="stylesheet"
+	href="../css/fund.css">
+<meta charset="UTF-8">
+<title>Fund Form（Ajax）</title>
+
+</style>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/util.js"></script>
+<script src="../js/jquery.validate.min.js"></script>
+<script src="../js/messages_zh_TW.min.js"></script>
+<script src="../js/fund.js"></script>
+
+
+</head>
+<body style="padding: 15px">
+	<table>
+		<tr>
+			<!-- Fund Form -->
+			<td valign="top">
+				<form id="myForm" class="pure-form">
+					<fieldset>
+						<legend>
+							<a href="../mvc/lab/fundstock/">Fundstock Form</a> | Fund
+							Form（Ajax）
+						</legend>
+						基金序號： 
+						<input type="text" id="fid" name="fid" readonly />
+						<p />
+						基金名稱： <input type="text" id="fname" name="fname" required />
+						<p />
+						<button type="button" id="add"
+							class="pure-button pure-button-primary">新增</button>
+						<button type="button" id="upt"
+							class="pure-button pure-button-primary" disabled>修改</button>
+						<button type="button" id="del"
+							class="pure-button pure-button-primary" disabled>刪除</button>
+						<button type="button" id="rst"
+							class="pure-button pure-button-primary">重置</button>
+						<p />
+					</fieldset>
+				</form>
+			</td>
+			<!-- Fundstock List -->
+			<td valign="top">
+				<form class="pure-form">
+					<fieldset>
+						<legend> Fund List&nbsp;|&nbsp;
+						<div id="pageScope">
+							<span class="mylink" onclick="queryPage(0);">全部</span>
+							&nbsp;|&nbsp;
+							<!-- 動態分頁處理 -->
+						</div>
+						</legpend>
+						<table id="myTable" class="pure-table pure-table-bordered">
+							<thead>
+								<tr>
+									<th>基金序號</th>
+									<th>基金名稱</th>
+									<th>建立日期</th>
+									<th>成分股</th>
+								</tr>
+							</thead>
+							<tbody>
+								
+							</tbody>
+						</table>
+					</fieldset>
+				</form>
+			</td>
+		</tr>
+	</table>
+
+</body>
+</html>

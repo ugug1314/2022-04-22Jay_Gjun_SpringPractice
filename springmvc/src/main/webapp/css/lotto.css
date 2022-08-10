@@ -1,0 +1,10 @@
+@charset "UTF-8";
+#Numcount td:nth-child(odd){
+	color:blue;
+}
+#Numcount td:nth-child(even){
+	color:red;
+}
+#Numcount tr:first-child{
+	background-color:#BFFFBF;
+}
