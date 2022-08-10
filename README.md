@@ -1,2 +1,3 @@
-# Jay_SpringCorePractice
+# 
+Jay_Gjun_SpringPractice
 
