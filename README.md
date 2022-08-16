@@ -28,4 +28,4 @@
 程式碼:[SQL](https://github.com/ugug1314/2022-04-22Jay_Gjun_SpringPractice/blob/main/springmvc/src/main/java/com/study/springmvc/lab/lab.sql)<br>
 程式碼:[fund.html](https://github.com/ugug1314/2022-04-22Jay_Gjun_SpringPractice/blob/main/springmvc/src/main/webapp/html/fund.html)<br>
 程式碼:[JSP](https://github.com/ugug1314/2022-04-22Jay_Gjun_SpringPractice/blob/main/springmvc/src/main/webapp/WEB-INF/views/lab/fundstock.jsp)<br>
-程式碼:[fund.js](https://github.com/ugug1314/2022-04-22Jay_Gjun_SpringPractice/blob/main/springmvc/src/main/webapp/js/fund.js)/[fundstock](https://github.com/ugug1314/2022-04-22Jay_Gjun_SpringPractice/blob/main/springmvc/src/main/webapp/js/fundstock.js])<br>
+程式碼:[fund.js](https://github.com/ugug1314/2022-04-22Jay_Gjun_SpringPractice/blob/main/springmvc/src/main/webapp/js/fund.js)/[fundstock](https://github.com/ugug1314/2022-04-22Jay_Gjun_SpringPractice/blob/main/springmvc/src/main/webapp/js/fundstock.js)<br>
